@@ -7,7 +7,7 @@ printf "Installing utils and drivers\n"
 doas pkg install -y drm-kmod doas lynx curl fzf
 
 printf "Installing apps\n"
-doas pkg install -y htop irssi newsraft librewolf zathura zathura-pdf-mupdf qbittorrent mpv
+doas pkg install -y htop zathura zathura-pdf-mupdf qbittorrent mpv
 
-printf "Installing lxqt with xlibre\n"
+printf "Installing xfce with xlibre\n"
 doas pkg install -y xlibre xinit xfce
