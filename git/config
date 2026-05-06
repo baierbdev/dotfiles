@@ -1,0 +1,34 @@
+[user]
+	name = Bruno Baier
+	email = baierbdev@yandex.com
+[tag]
+	sort = version:refname
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[init]
+	defaultBranch = main
+[help]
+	autocorrect = prompt
+[commit]
+	verbose = true
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[pull]
+	rebase = true
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[advice]
+	addIgnoredFile = false
+[core]
+	editor = nvim
