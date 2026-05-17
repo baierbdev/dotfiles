@@ -8,21 +8,23 @@ filetype indent on
 
 set number
 set autoindent	
-set shiftwidth=4
 set smartindent	
 set smarttab
 set softtabstop=4
+set shiftwidth=4
 
 set background=dark
+set termguicolors
+
+set laststatus=2
 
 call plug#begin()
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'nanotech/jellybeans.vim'
+Plug 'huyvohcmc/atlas.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -30,10 +32,13 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
-colorscheme jellybeans
+colorscheme atlas
 
 nnoremap <Leader>e :NERDTreeToggle<CR>
 nnoremap <Leader>c :e ~/.vimrc<CR>
+
+let g:lightline={}
+let g:lightline.colorscheme = 'atlas'
 
 " Indent lines enable
 let g:indent_guides_enable_on_vim_startup = 1
@@ -42,7 +47,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 if executable('clangd19')
     au User lsp_setup call lsp#register_server({
 		\ 'name': 'clangd',
-		\ 'cmd': {server_info->['clangd19']},
+		\ 'cmd': {server_info->['clangd']},
 		\ 'allowlist': ['c', 'cpp'],
 		\ })
 endif

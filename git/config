@@ -31,4 +31,4 @@
 [advice]
 	addIgnoredFile = false
 [core]
-	editor = nvim
+	editor = vim
