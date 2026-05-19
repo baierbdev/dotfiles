@@ -44,7 +44,7 @@ let g:lightline.colorscheme = 'atlas'
 let g:indent_guides_enable_on_vim_startup = 1
 
 " Lsp Config
-if executable('clangd19')
+if executable('clangd')
     au User lsp_setup call lsp#register_server({
 		\ 'name': 'clangd',
 		\ 'cmd': {server_info->['clangd']},
