@@ -29,7 +29,7 @@ return {
 				desc = "Git commit",
 			},
 			{
-				"<leader>gc",
+				"<leader>ga",
 				"<cmd>Git add %<cr>",
 				desc = "Git Add File",
 			},
