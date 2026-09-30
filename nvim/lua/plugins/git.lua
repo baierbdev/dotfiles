@@ -22,6 +22,19 @@ return {
 	{
 		'nvim-mini/mini-git',
 		version = false,
+		keys = {
+			{
+				"<leader>gc",
+				"<cmd>Git commit<cr>",
+				desc = "Git commit",
+			},
+			{
+				"<leader>gc",
+				"<cmd>Git add %<cr>",
+				desc = "Git Add File",
+			},
+
+		}
 	},
 	{
 		"f-person/git-blame.nvim",
