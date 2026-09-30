@@ -22,5 +22,9 @@ return {
 	{
 		'nvim-mini/mini-git',
 		version = false,
+	},
+	{
+		"f-person/git-blame.nvim",
+		event = "VeryLazy",
 	}
 }
