@@ -5,6 +5,11 @@ return {
 		lazy = false,
 		keys = {
 			{
+				"<leader>f",
+				"<cmd>lua Snacks.picker.files()<cr>",
+				desc = "Find file",
+			},
+			{
 				"<leader>e",
 				"<cmd>lua Snacks.picker.explorer()<cr>",
 				desc = "Open explorer",

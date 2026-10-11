@@ -1,9 +1,5 @@
 return {
 	{
-		"mason-org/mason.nvim",
-		opts = {}
-	},
-	{
 		"ray-x/lsp_signature.nvim",
 		event = "InsertEnter",
 	},
@@ -18,12 +14,23 @@ return {
 		end,
 		opts = {
 			keymap = { preset = 'default' },
-			completion = { documentation = { auto_show = true } },
+			completion = { documentation = { auto_show = true }},
 			sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
 			fuzzy = { implementation = "rust" }
 		},
 	},
 	{
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		"j-hui/fidget.nvim",
+		opts = {
+		},
+	},
+	{
+		"rachartier/tiny-inline-diagnostic.nvim",
+		event = "VeryLazy",
+		priority = 1000,
+		config = function()
+			require("tiny-inline-diagnostic").setup()
+			vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
+		end,
 	}
 }
