@@ -1,1 +1,1 @@
-require("lualine").setup()
+require('mini.statusline').setup()
