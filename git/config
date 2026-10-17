@@ -13,6 +13,7 @@
 	autocorrect = prompt
 [commit]
 	verbose = true
+    gpgSign = true
 [diff]
 	algorithm = histogram
 	colorMoved = plain
