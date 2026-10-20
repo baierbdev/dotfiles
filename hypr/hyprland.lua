@@ -12,6 +12,7 @@ local menu        = "hyprlauncher"
 
 hl.on("hyprland.start", function () 
   hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("waybar")
 end)
 
 
@@ -121,6 +122,7 @@ hl.config({
     misc = {
         force_default_wallpaper = 0,    
         disable_hyprland_logo   = false,
+        disable_splash_rendering = true
     },
 })
 

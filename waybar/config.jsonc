@@ -1,0 +1,81 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "spacing": 6,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 40,
+    "separate-outputs": true
+  },
+
+  "clock": {
+    "format": "◷  {:%H:%M  ·  %a %d %b}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  "cpu": {
+    "format": "CPU {usage}%",
+    "interval": 2,
+    "tooltip": false
+  },
+
+  "memory": {
+    "format": "RAM {}%",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "VOL muted",
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+
+  "network": {
+    "format-wifi": "WIFI {signalStrength}%",
+    "format-ethernet": "ETH connected",
+    "format-disconnected": "NET offline",
+    "tooltip": true
+  },
+
+  "battery": {
+    "format": "BAT {capacity}%",
+    "format-charging": "BAT +{capacity}%",
+    "format-full": "BAT full",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    }
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+}
