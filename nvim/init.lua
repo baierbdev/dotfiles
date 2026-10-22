@@ -21,14 +21,11 @@ local map = vim.keymap.set
 vim.diagnostic.config({ visual_text = true })
 
 vim.pack.add({
-    { src = 'https://github.com/nvim-mini/mini.icons', version = 'stable' },
-    { src = 'https://github.com/nvim-mini/mini.statusline', version = 'stable' },
-    { src = 'https://github.com/nvim-mini/mini.tabline', version = 'stable' },
-    { src = 'https://github.com/nvim-mini/mini.pairs', version = 'stable' },
-    { src = 'https://github.com/nvim-mini/mini.starter', version = 'stable' },
-    { src = 'https://github.com/nvim-mini/mini-git', version = 'stable' },
+    { src = 'https://github.com/nvim-mini/mini.nvim', version = 'stable' },
     { src = 'https://github.com/oskarnurm/koda.nvim', version = 'main' },
+    { src = 'https://github.com/folke/which-key.nvim', version = 'main' },
     { src = 'https://github.com/Bekaboo/dropbar.nvim', version = 'master' },
+    { src = 'https://github.com/nvim-tree/nvim-tree.lua', version = 'master' },
 })
 
 
@@ -38,6 +35,8 @@ require("mini.pairs").setup()
 require('mini.starter').setup()
 require('mini.git').setup()
 require('dropbar').setup()
+require('which-key').setup()
+require("nvim-tree").setup()
 
 vim.cmd("colorscheme koda")
 
@@ -60,6 +59,7 @@ vim.o.pumheight=5
 vim.o.pumborder='rounded'
 
 map('i', '<C-Space>', function()  vim.lsp.completion.get() end)
+map('n', '<Leader>e','<cmd>NvimTreeToggle<CR>', { desc = "Explorer"})
 
 vim.lsp.enable({ "clangd" , "typescript-language-server", "gopls", "texlab" })
 
